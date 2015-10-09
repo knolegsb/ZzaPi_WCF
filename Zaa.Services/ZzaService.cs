@@ -14,7 +14,7 @@ namespace Zza.Services
     {
         readonly ZzaDbContext _Context = new ZzaDbContext();
 
-        public List<Product> GetProduct()
+        public List<Product> GetProducts()
         {
             return _Context.Products.ToList();
         }

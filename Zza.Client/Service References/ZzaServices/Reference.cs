@@ -16,10 +16,10 @@ namespace Zza.Client.ZzaServices {
     public interface IZzaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IZzaService/GetProduct", ReplyAction="http://tempuri.org/IZzaService/GetProductResponse")]
-        System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product> GetProduct();
+        System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product> GetProducts();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IZzaService/GetProduct", ReplyAction="http://tempuri.org/IZzaService/GetProductResponse")]
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product>> GetProductAsync();
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product>> GetProductsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IZzaService/GetCustomers", ReplyAction="http://tempuri.org/IZzaService/GetCustomersResponse")]
         System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Customer> GetCustomers();
@@ -40,7 +40,8 @@ namespace Zza.Client.ZzaServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ZzaServiceClient : System.ServiceModel.ClientBase<Zza.Client.ZzaServices.IZzaService>, Zza.Client.ZzaServices.IZzaService {
+    public partial class ZzaServiceClient : System.ServiceModel.ClientBase<Zza.Client.ZzaServices.IZzaService>, IZzaService
+    {
         
         public ZzaServiceClient() {
         }
@@ -61,12 +62,12 @@ namespace Zza.Client.ZzaServices {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product> GetProduct() {
-            return base.Channel.GetProduct();
+        public System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product> GetProducts() {
+            return base.Channel.GetProducts();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product>> GetProductAsync() {
-            return base.Channel.GetProductAsync();
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Product>> GetProductsAsync() {
+            return base.Channel.GetProductsAsync();
         }
         
         public System.Collections.ObjectModel.ObservableCollection<Zza.Entities.Customer> GetCustomers() {

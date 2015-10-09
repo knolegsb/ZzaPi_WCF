@@ -12,7 +12,7 @@ namespace Zza.Services
     public interface IZzaService
     {
         [OperationContract]
-        List<Product> GetProduct();
+        List<Product> GetProducts();
         [OperationContract]
         List<Customer> GetCustomers();
         [OperationContract]
