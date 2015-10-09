@@ -51,6 +51,34 @@
                HorizontalAlignment="Left"
                Margin="10, 2, 0, 0"
                VerticalAlignment="Top" />
+        <ItemsControl ItemsSource="{Binding Products}"
+                      ItemTemplate="{StaticResource ProductTemplate}"
+                      HorizontalAlignment="Left"
+                      Height="526"
+                      Margin="266, 34, 0, 0"
+                      VerticalAlignment="Top"
+                      Width="518" />
+        <DataGrid ItemsSource="{Binding Items}"
+                  AutoGenerateColumns="False"
+                  ColumnHeaderHeight="0"
+                  CanUserAddRows="False"
+                  HorizontalAlignment="Left"
+                  Height="476"
+                  Margin="10, 60, 0, 0"
+                  VerticalAlignment="Top"
+                  Width="239">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ProductName}" />
+                <DataGridTextColumn Binding="{Binding Quantity}" />
+                <DataGridTextColumn Binding="{Binding TotalPrice}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Command="{Binding SubmitOrderCommand}"
+                Content="Submit Order"
+                HorizontalAlignment="Left"
+                Margin="10, 541, 0, 0"
+                VerticalAlignment="Top"
+                Width="239" />
     </Grid>
    
 </Window>

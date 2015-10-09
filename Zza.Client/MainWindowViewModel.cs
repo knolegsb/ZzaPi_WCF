@@ -59,14 +59,17 @@ namespace Zza.Client
             set { SetProperty(ref _CurrentOrder, value); }
         }
 
-        private void LoadProductsAndCustomers()
+        private async void LoadProductsAndCustomers()
         {
-            ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
+            //ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
+            ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
 
             try
             {
-                Products = proxy.GetProducts();
-                Customers = proxy.GetCustomers();
+                //Products = proxy.GetProducts();
+                //Customers = proxy.GetCustomers();
+                Products = await proxy.GetProductsAsync();
+                Customers = await proxy.GetCustomersAsync();
             }
             catch(Exception ex)
             {
