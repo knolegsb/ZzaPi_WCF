@@ -61,8 +61,8 @@ namespace Zza.Client
 
         private async void LoadProductsAndCustomers()
         {
-            //ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
-            ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
+            ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
+            //ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
 
             try
             {
