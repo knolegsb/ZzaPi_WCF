@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Service="Zaa.Services.ZzaService" %>
+﻿<%@ ServiceHost Service="Zza.Services.ZzaService" %>

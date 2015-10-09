@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Zza.Data;
 using Zza.Entities;
 
-namespace Zaa.Services
+namespace Zza.Services
 {
     [ServiceBehavior(InstanceContextMode =InstanceContextMode.Single)]
     public class ZzaService : IZzaService, IDisposable

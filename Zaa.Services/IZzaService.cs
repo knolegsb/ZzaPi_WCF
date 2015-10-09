@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zza.Entities;
 
-namespace Zaa.Services
+namespace Zza.Services
 {
     [ServiceContract]
     public interface IZzaService

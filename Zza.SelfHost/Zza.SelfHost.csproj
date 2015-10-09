@@ -52,9 +52,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Zaa.Services\Zaa.Services.csproj">
+    <ProjectReference Include="..\Zaa.Services\Zza.Services.csproj">
       <Project>{e1c05de9-ee60-4e67-bac4-1b87f19fd1ce}</Project>
-      <Name>Zaa.Services</Name>
+      <Name>Zza.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

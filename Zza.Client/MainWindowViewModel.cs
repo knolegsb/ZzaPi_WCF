@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Zza.Entities;
-using Zza.Client.ZaaServices;
+using Zza.Client.ZzaServices;
 
 namespace Zza.Client
 {

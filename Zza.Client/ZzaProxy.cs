@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zaa.Services;
 using System.ServiceModel;
 using Zza.Client.ZzaServices;
 using System.ServiceModel.Channels;
@@ -19,6 +18,31 @@ namespace Zza.Client
         public ObservableCollection<Entities.Product> GetProducts()
         {
             return Channel.GetProducts();
+        }
+
+        public Task<ObservableCollection<Entities.Product>> GetProductsAsync()
+        {
+            return Channel.GetProductsAsync();
+        }
+
+        public ObservableCollection<Entities.Customer> GetCustomers()
+        {
+            return Channel.GetCustomers();
+        }
+
+        public Task<ObservableCollection<Entities.Customer>> GetCustomersAsync()
+        {
+            return Channel.GetCustomersAsync();
+        }
+
+        public void SubmitOrder(Entities.Order order)
+        {
+            Channel.SubmitOrder(order);
+        }
+
+        public Task SubmitOrderAsync(Entities.Order order)
+        {
+            return Channel.SubmitOrderAsync(order);
         }
     }
 }

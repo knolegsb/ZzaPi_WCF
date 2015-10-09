@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaa.Services", "Zaa.Services\Zaa.Services.csproj", "{E1C05DE9-EE60-4E67-BAC4-1B87F19FD1CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zza.Services", "Zaa.Services\Zza.Services.csproj", "{E1C05DE9-EE60-4E67-BAC4-1B87F19FD1CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zza.Data", "Zza.Data\Zza.Data.csproj", "{49B7D2D2-7A8A-4BA9-8D53-EF860BF2A484}"
 EndProject
