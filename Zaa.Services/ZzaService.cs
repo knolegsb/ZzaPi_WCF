@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Zza.Data;
 using Zza.Entities;
@@ -14,8 +16,10 @@ namespace Zza.Services
     {
         readonly ZzaDbContext _Context = new ZzaDbContext();
 
+        [PrincipalPermission(SecurityAction.Demand, Role ="BUILTIN\\Users")]
         public List<Product> GetProducts()
         {
+            var principal = Thread.CurrentPrincipal;
             return _Context.Products.ToList();
         }
 
